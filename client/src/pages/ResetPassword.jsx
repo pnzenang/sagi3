@@ -24,7 +24,7 @@ export const action = async ({ request }) => {
 
   try {
     await customFetch.post("/auth/reset-password", data);
-    toast.success("Password reset successfully");
+    toast.success("Password reset successfully, login");
     return redirect("/login");
   } catch (error) {
     toast.error(error?.response?.data?.msg);
