@@ -80,6 +80,7 @@ const Wrapper = styled.section`
   .accordion-button {
     color: var(--primary-400);
     background: var(--background-secondary-color);
+    font-weight: bolder;
   }
   .accordion-item {
     color: var(--text-secondary-color);
