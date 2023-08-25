@@ -42,9 +42,13 @@ const Services = () => {
 const Wrapper = styled.section`
   /* margin-top: 10rem; */
 
-  h3,
+  h3 {
+    color: var(--primary-500);
+    margin: 1rem 0;
+  }
+
   h4 {
-    color: var(--clr-primary-1);
+    color: var(--primary-200);
     margin: 1rem 0;
   }
   /* padding: 5rem 0; */

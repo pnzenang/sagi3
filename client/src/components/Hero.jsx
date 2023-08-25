@@ -56,6 +56,8 @@ const Wrapper = styled.section`
     gap: 8rem;
     h1 {
       margin-bottom: 2rem;
+      font-weight: bolder;
+      color: var(--primary-400);
     }
     p {
       font-size: 1.25rem;

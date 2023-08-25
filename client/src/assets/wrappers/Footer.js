@@ -13,6 +13,9 @@ const Wrapper = styled.nav`
     align-items: center;
     justify-content: space-between;
   }
+  .copyright {
+    font-weight: bolder;
+  }
 
   .btn-container {
     display: flex;

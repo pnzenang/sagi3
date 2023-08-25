@@ -46,6 +46,7 @@ const Wrapper = styled.nav`
     }
     .logo-text {
       display: block;
+      color: var(--primary-500);
     }
     .btn {
       margin-top: 1rem;
