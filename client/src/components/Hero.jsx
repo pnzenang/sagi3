@@ -12,15 +12,15 @@ const Hero = () => {
         <p>
           It is true that we are witnessing a race for enrichment across the
           country, by similar groups, some to prepare for their retirement,
-          others to ensure the future of their children, but we at SAGI we
-          believe that we must go back to basics, our organization must return
-          to its initial mission, which brought joy to the faces of many
-          Cameroonians by organizing our member associations so that when a
-          family is struck by the death of one of its Members, we get together,
-          provide the necessary funds to bury the love one. We understand the
-          needs for a budget to run an organization, but when the monthly
-          “administrative fees” exceed the benefit that we must pay to the
-          family, it becomes a bit problematic.
+          others to ensure the future of their children, but at SAGI we believe
+          that we must go back to basics, our organization must return to its
+          initial mission, which brought joy to the faces of many Cameroonians
+          by organizing our member associations so that when a family is struck
+          by the death of one of its Members, we get together, provide the
+          necessary funds to bury the love one. We understand the needs for a
+          budget to run an organization, but when the monthly “administrative
+          fees” exceed the benefit that we must pay to the family, it becomes a
+          bit problematic.
         </p>
         {/* <Link to="/products" className="btn hero-btn">
           shop now
