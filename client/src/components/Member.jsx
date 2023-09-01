@@ -27,6 +27,7 @@ const Member = ({
 }) => {
   const date = day(createdAt).format("MMM Do, YYYY");
   const time = dayjs(createdAt).fromNow(true);
+  const temps = dayjs(createdAt).add(90, "d").format("MMM Do, YYYY");
 
   const { user } = useDashboardContext();
   return (
@@ -43,15 +44,10 @@ const Member = ({
       <div className="content">
         <div className="content-center">
           <MemberInfo
-            title="Mat."
             icon={<MdOutlineNumbers />}
-            text={memberMatriculation}
+            text={`Mat: ${memberMatriculation}`}
           />
-          <MemberInfo
-            icon={<FaCalendarAlt />}
-            text={date}
-            title={`(${time})`}
-          />
+          <MemberInfo icon={<FaCalendarAlt />} text={`${date}--V:${temps}`} />
           <MemberInfo icon={<GoCheck />} text={delegateRecommendation} />
           <div className={`status ${memberStatus}`}>{memberStatus}</div>
         </div>

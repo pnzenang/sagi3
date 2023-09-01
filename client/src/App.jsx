@@ -191,6 +191,7 @@ const router = createBrowserRouter([
           //   element: <Profile />,
           //   action: profileAction(queryClient),
           // },
+
           {
             path: "admin",
             element: <Admin />,

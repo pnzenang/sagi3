@@ -7,6 +7,7 @@ import {
 import { BsBarChart } from "react-icons/bs";
 import { AiOutlineProfile } from "react-icons/ai";
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
+import { FaHouseUser } from "react-icons/fa";
 
 const links = [
   {
@@ -35,6 +36,7 @@ const links = [
   //   path: "profile",
   //   icon: <AiOutlineProfile />,
   // },
+
   {
     text: "admin",
     path: "admin",
