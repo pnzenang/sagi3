@@ -1,6 +1,7 @@
 import { FaCalendarAlt } from "react-icons/fa";
 import { MdOutlineNumbers } from "react-icons/md";
 import { GoCheck } from "react-icons/go";
+import { FcApproval } from "react-icons/fc";
 import { useDashboardContext } from "../pages/DashboardLayout";
 import { Link, Form } from "react-router-dom";
 import Wrapper from "../assets/wrappers/Member";
@@ -11,6 +12,7 @@ import moment from "moment";
 import relativeTime from "dayjs/plugin/relativeTime";
 import duration from "dayjs/plugin/duration";
 import dayjs from "dayjs";
+
 day.extend(advancedFormat);
 dayjs.extend(relativeTime);
 
@@ -44,15 +46,34 @@ const Member = ({
       <div className="content">
         <div className="content-center">
           <MemberInfo
-            icon={<MdOutlineNumbers />}
+            icon={<MdOutlineNumbers size={20} />}
             text={`Mat: ${memberMatriculation}`}
           />
-          <MemberInfo icon={<FaCalendarAlt />} text={`${date}--V:${temps}`} />
+          <MemberInfo
+            icon={<FaCalendarAlt size={20} />}
+            text={`created: ${date}`}
+          />
           <MemberInfo icon={<GoCheck />} text={delegateRecommendation} />
+          <MemberInfo
+            icon={<FcApproval size={20} />}
+            text={`Vested: ${temps}`}
+          />
           <div className={`status ${memberStatus}`}>{memberStatus}</div>
+          <div className="actions">
+            <Link to={`../edit-member/${_id}`} className="btn edit-btn">
+              {user.role === "admin" ? "Edit Status" : "Edit Recommendation"}
+            </Link>
+            {user.role === "admin" ? (
+              <Form method="post" action={`../delete-member/${_id}`}>
+                <button type="submit" className="btn delete-btn">
+                  Delete
+                </button>
+              </Form>
+            ) : null}
+          </div>
         </div>
 
-        <footer className="actions">
+        {/* <footer className="actions">
           <Link to={`../edit-member/${_id}`} className="btn edit-btn">
             {user.role === "admin" ? "Edit Status" : "Edit Recommendation"}
           </Link>
@@ -63,7 +84,7 @@ const Member = ({
               </button>
             </Form>
           ) : null}
-        </footer>
+        </footer> */}
       </div>
     </Wrapper>
   );

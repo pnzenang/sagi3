@@ -53,6 +53,7 @@ const Wrapper = styled.article`
     }
   }
   .status {
+    margin-left: 0.5rem;
     border-radius: var(--border-radius);
     text-transform: capitalize;
     letter-spacing: var(--letter-spacing);
@@ -63,7 +64,7 @@ const Wrapper = styled.article`
     align-items: center;
   }
   .actions {
-    margin-top: 1rem;
+    /* margin-top: 0.5rem; */
     display: flex;
     align-items: center;
   }
@@ -76,6 +77,10 @@ const Wrapper = styled.article`
   }
   .edit-btn {
     margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  .delete-btn {
+    background: var(--red-clean);
   }
 `;
 
