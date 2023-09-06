@@ -10,7 +10,7 @@ import { FormRow, Logo, SubmitBtn } from "../components";
 import customFetch from "../utils/customFetch";
 import { toast } from "react-toastify";
 
-const searchParams = new URLSearchParams(location.search);
+const searchParams = new URLSearchParams(window.location.search);
 
 export const action = async ({ request }) => {
   const token = searchParams.get("token");

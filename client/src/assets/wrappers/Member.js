@@ -53,7 +53,7 @@ const Wrapper = styled.article`
     }
   }
   .status {
-    margin-left: 0.5rem;
+    margin-left: 0.6rem;
     border-radius: var(--border-radius);
     text-transform: capitalize;
     letter-spacing: var(--letter-spacing);
@@ -77,7 +77,7 @@ const Wrapper = styled.article`
   }
   .edit-btn {
     margin-right: 0.5rem;
-    margin-left: 0.5rem;
+    margin-left: 0.6rem;
   }
   .delete-btn {
     background: var(--red-clean);

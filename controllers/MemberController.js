@@ -105,7 +105,6 @@ export const VestedAllMembers = async (req, res) => {
     .json({ totalMembers, numOfPages, currentPage: page, members });
 };
 
-
 export const createMember = async (req, res) => {
   const user = await User.findOne({ _id: req.user.userId });
 
