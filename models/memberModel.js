@@ -6,6 +6,7 @@ const MemberSchema = new mongoose.Schema(
     associationCode: String,
     memberFirstName: String,
     lastAndMiddleName: String,
+    dateOfBirth: Date,
     memberStatus: {
       type: String,
       enum: Object.values(MEMBER_STATUS),

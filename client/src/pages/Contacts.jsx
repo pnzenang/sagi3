@@ -1,109 +1,179 @@
 import styled from "styled-components";
-import { useState } from "react";
-import data from "../utils/data";
-import { Contact, Question } from "../components";
-import { BsTelephone, BsGlobe } from "react-icons/bs";
-import { AiOutlineMail, AiOutlineForm } from "react-icons/ai";
+// import "bootstrap/dist/css/bootstrap.css";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { useForm } from "@formcarry/react";
+import { BsTelephone, BsGlobe, BsGlobe2 } from "react-icons/bs";
+import { MdAlternateEmail, MdOutlineFax } from "react-icons/md";
+import { AiOutlineForm } from "react-icons/ai";
 
 const Contacts = () => {
-  const [questions, setQuestions] = useState(data);
+  const { state, submit } = useForm({
+    id: "lf9ydgvxGb",
+  });
+  // if (state.submitted) {
+  //   return <div>Thank you! We received your submission</div>;
+  // }
   return (
     <Wrapper>
-      <div className="container">
-        <div>
-          <BsTelephone size={40} color="var(--primary-500)" />
-        </div>
-        <h4>443-531-5852/ 301-512-3919 / 240-821-0366</h4>
-      </div>
-      <div className="container">
-        <div>
-          <AiOutlineMail size={40} color="var(--primary-500)" />
-        </div>
-        <h4>info@active-solidarity.com</h4>
-      </div>
-      <div className="container">
-        <div>
-          <BsGlobe size={40} color="var(--primary-500)" />
-        </div>
-        <h4>active-solidarity.com</h4>
-      </div>
-      <div className="container">
-        <div>
-          <AiOutlineForm size={40} color="var(--primary-500)" />
-        </div>
-        <h4>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScRb0Yq_lP_qYG59rq-7S3tE7rMSeyz-EzdNMcLwrGJLtJ_aw/viewform?usp=sf_link">
-            SAGI Introductory Form
-          </a>
-        </h4>
-      </div>
+      <Container fluid>
+        <h1 className="contact-title">CONTACTS</h1>
+        <Row>
+          <Col md={6} className="form-container">
+            <form
+              action="https://formcarry.com/s/lf9ydgvxGb"
+              method="POST"
+              className="myForm"
+            >
+              <div className="form-row">
+                <h4>Leave us a message!</h4>
+                <label htmlFor="name" className="form-label">
+                  Full Name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  className="form-input"
+                  required
+                />
+              </div>
+              <div className="form-row">
+                <label htmlFor="email" className="form-label">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  className="form-input"
+                  required
+                />
+              </div>
+              <div className="form-row">
+                <label htmlFor="message" className="form-label">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  type="email"
+                  name="message"
+                  className="form-textarea"
+                  required
+                />
+              </div>
+              <button type="submit" className="btn">
+                Send
+              </button>
+            </form>
+          </Col>
+          <Col>
+            <div className="myForm">
+              <div className="contact-line">
+                <BsTelephone size={40} className="icon" />
+                <p>443-531-5852</p>
+              </div>
+              <div className="contact-line">
+                <MdOutlineFax size={45} className="icon" />
+                <p>443-531-5852</p>
+              </div>
+              <div className="contact-line">
+                <MdAlternateEmail size={40} className="icon" />
+                <p>info@mySagi.org</p>
+              </div>
+              <div className="contact-line">
+                <BsGlobe size={40} className="icon" />
+                <p>mySagi.org</p>
+              </div>
+              <div className="contact-line">
+                <AiOutlineForm size={40} className="icon" />
+                <p>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGmkYyHR03aV9otU2Z7I1rvtP3pbDHJBzGmCamqDvOmvQTMg/viewform?usp=sf_link">
+                    Introductory form
+                  </a>
+                </p>
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </Wrapper>
   );
 };
+const Wrapper = styled.section`
+  margin: auto;
+  min-height: 70vh;
+  display: grid;
 
-const Wrapper = styled.main`
-  border-radius: var(--border-radius);
-  width: 100%;
+  align-items: center;
   background: var(--background-secondary-color);
-  padding: 1rem 2rem 2rem;
-  line-height: 1.5rem;
 
-  main {
-    min-height: 100vh;
-    /*using flex because of better browser support */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .myForm {
+    max-width: 500px;
+    background: var(--background-secondary-color);
+    padding: 2rem 2.5rem;
+    margin: 4rem auto;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19); */
+    border-radius: 5px;
+    border: solid 1px var(--primary-500);
   }
-
-  .container {
-    width: 50vw;
-    margin: 1rem auto;
-    background: var(--clr-white);
-    border-radius: var(--radius);
-    padding: 1rem 1rem;
-    width: 100%;
-    /* max-width: var(--fixed-width); */
-    display: grid;
-    gap: 1rem 1rem;
-    box-shadow: var(--light-shadow);
-  }
-  .container h4 {
-    line-height: 1.2;
-    font-weight: 500;
-    color: #349feb;
-  }
-  @media (min-width: 992px) {
-    .container {
-      display: grid;
-      grid-template-columns: 100px 1fr;
-    }
-  }
-  .question {
-    padding: 1rem 1.5rem;
-    border: 2px solid var(--clr-grey-special);
-    margin-bottom: 1rem;
-    border-radius: var(--radius);
-    box-shadow: var(--light-shadow);
-  }
-  .question h4 {
-    text-transform: none;
-    line-height: 1.5;
+  .contact-title {
+    text-align: center;
     color: var(--primary-500);
+    margin-top: 2rem;
+    font-weight: 700;
   }
-  .question p {
-    color: var(--clr-grey-3);
-    margin-bottom: 0;
-    margin-top: 0.5rem;
+  h3 {
+    margin-bottom: 2rem;
+    text-align: center;
   }
-  .question header {
+  h5 {
+    text-transform: lowercase;
+  }
+  h4 {
+    text-align: center;
+    margin-bottom: 1.38rem;
+  }
+  p {
+    margin-top: 1rem;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 700;
+    /* color: white; */
+    /* text-shadow: 1px 1px 1px black, 0 0 5px var(--primary-500), 0 0 5px; */
+  }
+  .btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.65rem;
+  }
+  .member-btn {
+    color: var(--primary-500);
+    letter-spacing: var(--letter-spacing);
+    margin-left: 0.25rem;
+  }
+
+  .forgot-btn {
+    color: var(--red-dark);
+    letter-spacing: var(--letter-spacing);
+    margin-left: 0.25rem;
+  }
+  .App {
+    font-family: sans-serif;
+    padding: 20px;
+  }
+  .contact-line {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: orange;
+    padding: 0 2rem;
+    padding-bottom: 2.9rem;
+    text-transform: lowercase;
   }
-  .question header h4 {
-    margin-bottom: 0;
+  .icon {
+    size: 500;
+    color: var(--primary-500);
   }
 `;
 export default Contacts;

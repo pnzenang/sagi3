@@ -74,6 +74,7 @@ export const validateRegisterInput = withValidationErrors([
   body("lastAndMiddleName")
     .notEmpty()
     .withMessage("last And/or Middle Name are required"),
+  body("dateOfBirth").notEmpty().withMessage("date of birth is required"),
   body("email")
     .notEmpty()
     .withMessage("email is required")
@@ -95,8 +96,10 @@ export const validateRegisterInput = withValidationErrors([
     .withMessage("telephone number is required")
     .isMobilePhone()
     .withMessage("invalid telephone number format"),
+  body("streetAddress").notEmpty().withMessage("street address is required"),
   body("city").notEmpty().withMessage("city is required"),
   body("state").notEmpty().withMessage("state is required"),
+  body("zipCode").notEmpty().withMessage("zip code is required").isLength(5),
 ]);
 
 export const validateLoginInput = withValidationErrors([

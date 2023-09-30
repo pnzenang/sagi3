@@ -1,12 +1,12 @@
-import { Contact, Hero, Services } from "../components";
+import { Contact, Hero, Services, MissionCard } from "../components";
 import Wrapper from "../assets/wrappers/HomePage";
+
 const Mission = () => {
   return (
     <Wrapper>
       <Hero />
-      {/* <FeaturedProducts /> */}
+      <MissionCard />
       <Services />
-      <Contact />
     </Wrapper>
   );
 };

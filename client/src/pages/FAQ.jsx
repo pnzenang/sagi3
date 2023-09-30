@@ -8,7 +8,7 @@ const FAQ = () => {
   return (
     <Wrapper>
       <div className="container">
-        <h3>questions and answers about SAGI</h3>
+        <h1>Q&A ABOUT SAGI</h1>
         <section className="info">
           {questions.map((question) => {
             return <Question key={question.id} {...question}></Question>;
@@ -24,7 +24,7 @@ const Wrapper = styled.main`
   width: 100%;
   background: var(--background-secondary-color);
   padding: 1rem 2rem 2rem;
-  line-height: 1.5rem;
+  line-height: 2rem;
 
   main {
     min-height: 100vh;
@@ -50,11 +50,16 @@ const Wrapper = styled.main`
     font-weight: 500;
     color: #349feb;
   }
-  @media (min-width: 992px) {
+  /* @media (min-width: 992px) {
     .container {
       display: grid;
       grid-template-columns: 250px 1fr;
     }
+  } */
+  h1 {
+    color: var(--primary-500);
+    font-weight: 700;
+    text-align: center;
   }
   .question {
     padding: 1rem 1.5rem;

@@ -1,31 +1,32 @@
 import React from "react";
-import { HiMenuAlt4 } from "react-icons/hi";
+import { useForm, ValidationError } from "@formspree/react";
 import styled from "styled-components";
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm("xnqkzard");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
   return (
     <Wrapper>
       <div className="section-center">
         <div className="content">
-          <p>
-            To Join our organization, enter your email here to receive the
-            necessary information to register
-          </p>
-        </div>
-        <div>
-          <form
-            action="https://formspree.io/f/mzbqaggr"
-            method="POST"
-            className="contact-form"
-          >
-            <input
-              type="email"
-              className="form-input"
-              placeholder="enter-email"
-              name="email"
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="email">Email Address</label>
+            <input id="email" type="email" name="email" />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
             />
-            <button type="submit" className="submit-btn">
-              subscribe
+            <textarea id="message" name="message" />
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
+            <button type="submit" disabled={state.submitting}>
+              Submit
             </button>
           </form>
         </div>

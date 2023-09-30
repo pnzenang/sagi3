@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import heroBcg from "../assets/images/africa.jpg";
 import heroBcg2 from "../assets/images/kids.jpg";
 
@@ -8,19 +7,16 @@ const Hero = () => {
   return (
     <Wrapper className="section-center">
       <article className="content">
-        <h1>SAGI Mission:</h1>
+        <h1>SAGI MISSION</h1>
         <p>
-          It is true that we are witnessing a race for enrichment across the
-          country, by similar groups, some to prepare for their retirement,
-          others to ensure the future of their children, but at SAGI we believe
-          that we must go back to basics, our organization must return to its
-          initial mission, which brought joy to the faces of many Cameroonians
-          by organizing our member associations so that when a family is struck
-          by the death of one of its Members, we get together, provide the
-          necessary funds to bury the love one. We understand the needs for a
-          budget to run an organization, but when the monthly “administrative
-          fees” exceed the benefit that we must pay to the family, it becomes a
-          bit problematic.
+          It is true that we are witnessing a race to court cameroonians for
+          registration in some form of death benefits, most are doing it for
+          personal enrichment, but at SAGI we believe that we must stick to
+          basics, our organization must stay true to its initial mission, which
+          brought joy to the faces of many Cameroonians by organizing its member
+          associations so that when a family is struck by the death of one of
+          its Members, we get together, provide the necessary funds to bury the
+          loved one with love and peace of mind.
         </p>
         {/* <Link to="/products" className="btn hero-btn">
           shop now
@@ -38,7 +34,9 @@ const Wrapper = styled.section`
   min-height: 90vh;
   display: grid;
   place-items: center;
-  margin-bottom: 5rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+
   .img-container {
     display: none;
   }
@@ -98,6 +96,9 @@ const Wrapper = styled.section`
       bottom: 0%;
       left: -8%;
       border-radius: var(--radius);
+    }
+    .content {
+      margin-right: 1.5rem;
     }
   }
 `;

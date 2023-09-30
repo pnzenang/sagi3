@@ -1,11 +1,11 @@
 import Wrapper from "../assets/wrappers/HomePage";
-import { Services, Contact } from "../components";
+import { Services, Contact, AboutCard } from "../components";
 
 const About = () => {
   return (
     <Wrapper>
-      <Services />;
-      <Contact />
+      <AboutCard />
+      <Services />
     </Wrapper>
   );
 };

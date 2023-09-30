@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FormRow, FormRowSelect, SubmitBtn } from "../components";
+import { FormRow, FormRowSelect, SubmitBtn, FormRowDate } from "../components";
 import Wrapper from "../assets/wrappers/DashboardFormPage";
 import { useOutletContext } from "react-router-dom";
 import {
@@ -58,6 +58,8 @@ const AddMember = () => {
             name="lastAndMiddleName"
             labelText="last and middle names"
           />
+          <FormRowDate name="dateOfBirth" />
+
           {user.role === "user" ? (
             <FormRowSelect
               labelText="status"

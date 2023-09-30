@@ -5,7 +5,7 @@ const Wrapper = styled.section`
   width: 100%;
   background: var(--background-secondary-color);
   padding: 3rem 2rem 4rem;
-  line-height: 1.5rem;
+  line-height: 2rem;
   .form-title {
     margin-bottom: 1.5rem;
     font-weight: bolder;
@@ -85,6 +85,12 @@ const Wrapper = styled.section`
   .accordion-item {
     color: var(--text-secondary-color);
     background: var(--background-secondary-color);
+  }
+
+  h1 {
+    padding: 1rem;
+    color: var(--primary-500);
+    font-weight: 600;
   }
 `;
 

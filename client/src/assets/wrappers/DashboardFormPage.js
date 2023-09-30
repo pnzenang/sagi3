@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.section`
   border-radius: var(--border-radius);
@@ -23,6 +23,20 @@ const Wrapper = styled.section`
     display: grid;
     row-gap: 1rem;
   }
+  .react-datepicker-wrapper {
+    width: 100%;
+    font-size: 14px;
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .react-datepicker__calendar-icon {
+    background-color: red;
+    padding-top: 20px;
+  }
+  /* .app {
+    font-family: sans-serif;
+    text-align: center;
+  } */
   .form-btn {
     align-self: end;
     margin-top: 1rem;

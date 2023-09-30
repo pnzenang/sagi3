@@ -1,9 +1,9 @@
 import {
-  Link,
   Form,
   redirect,
   useNavigate,
   useLocation,
+  // useHistory,
 } from "react-router-dom";
 import Wrapper from "../assets/wrappers/RegisterAndLoginPage";
 import { FormRow, Logo, SubmitBtn } from "../components";
@@ -12,9 +12,14 @@ import { toast } from "react-toastify";
 
 const searchParams = new URLSearchParams(window.location.search);
 
+// function useQuery() {
+//   return new URLSearchParams(useLocation().search);
+// }
+
 export const action = async ({ request }) => {
-  const token = searchParams.get("token");
   const email = searchParams.get("email");
+  const token = searchParams.get("token");
+
   const formData = await request.formData();
   const { password } = Object.fromEntries(formData);
   const data = { token, email, password };
@@ -33,9 +38,6 @@ export const action = async ({ request }) => {
 };
 
 const ResetPassword = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-
   return (
     <Wrapper>
       <Form method="post" className="form">

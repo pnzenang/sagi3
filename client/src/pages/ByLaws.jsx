@@ -1,16 +1,16 @@
-import Wrapper from "../assets/wrappers/HomePage";
+import styled from "styled-components";
 import Accordion from "react-bootstrap/Accordion";
 
 const ByLaws = () => {
   return (
     <Wrapper>
+      <h1 style={{ textAlign: "center" }}>SAGI BYLAWS</h1>
       <Accordion>
         <Accordion.Item eventKey="0">
           <Accordion.Header>SECTION 1: PREAMBLE</Accordion.Header>
           <Accordion.Body>
             <p>
-              1.1. PURPOSE OF INTERNAL RULES & REGULATIONS
-              <br />
+              <span> 1.1. PURPOSE OF INTERNAL RULES & REGULATIONS</span>
               <br />
               The purpose of the Internal Rules & Regulations is to ensure the
               smooth running and proper functioning of the organization. The
@@ -23,8 +23,7 @@ const ByLaws = () => {
               this organization.
               <br />
               <br />
-              1.2. LIVING DOCUMENT
-              <br />
+              <span>1.2. LIVING DOCUMENT</span>
               <br />
               The Internal Rules & Regulations should serve as a living document
               to the organization’s officers, presidents of associations, and
@@ -38,8 +37,8 @@ const ByLaws = () => {
         <Accordion.Item eventKey="1">
           <Accordion.Header>SECTION 2: NAME</Accordion.Header>
           <Accordion.Body>
-            2.1. OFFICIAL NAME
             <br />
+            <span>2.1. OFFICIAL NAME</span>
             <br />
             The official name of the organization is Active Solidarity Ltd. The
             French translation of Active Solidarity is Solidarité Agissante
@@ -70,7 +69,6 @@ const ByLaws = () => {
             <br /> d. Informing all member associations, through their president
             and delegates in case of the death of a member association’s
             individual member. <br />
-            <br />
             e. Collecting contributions (donations) from each SAGI member
             association. <br />
             <br />
@@ -217,7 +215,9 @@ const ByLaws = () => {
         <Accordion.Item eventKey="10">
           <Accordion.Header>SECTION 11: LIST UPDATE</Accordion.Header>
           <Accordion.Body>
-            11.1. ADDITION OF INDIVIDUALS WITHIN MEMBER ASSOCIATIONS <br />
+            <span>
+              11.1. ADDITION OF INDIVIDUALS WITHIN MEMBER ASSOCIATIONS
+            </span>
             <br /> a. All requests for addition of individuals belonging to
             member associations of SAGI should be done right on the web
             application www.active-solidarity.com <br />
@@ -230,8 +230,8 @@ const ByLaws = () => {
             as a member of the member association. <br />
             <br /> d. Individuals added to member associations of SAGI must pay
             their Administration and Matriculation fees fifteen (15) days after
-            receiving the invoice. <br />
-            <br /> 11.2. WITHDRAWAL <br />
+            receiving the invoice. <br /> <br />
+            <span>11.2. WITHDRAWAL</span>
             <br />
             a. All requests for member withdraw should be done by right on the
             web application <br />
@@ -244,27 +244,28 @@ const ByLaws = () => {
             <br /> c. The effective date is the 25th of the month the withdrawal
             form has been submitted. <br />
             <br />
-            11.3. NAME CORRECTION <br />
+            <span>11.3. NAME CORRECTION</span>
             <br />
             a. All requests for name corrections should be done by submitting
-            Form S4 – SAGI Name Correction. b. Name corrections should be done
-            for minor errors such as typos. c. If a member individual’s name has
-            changed due to: o Divorce: Provide a copy of the divorce decree. o
-            Marriage: Provide a copy of the marriage certificate. o Court Order
-            Name Change: Provide a copy of a court-issued document. <br />
+            Form S4 – SAGI Name Correction. <br /> <br /> b. Name corrections
+            should be done for minor errors such as typos. <br /> <br />
+            c. If a member individual’s name has changed due to: o Divorce:
+            Provide a copy of the divorce decree. o Marriage: Provide a copy of
+            the marriage certificate. o Court Order Name Change: Provide a copy
+            of a court-issued document. <br />
             <br />
-            11.4. TRANSFER <br />
+            <span>11.4. TRANSFER </span>
             <br />
             a. Any individual belonging to an active member association of SAGI
             can elect to transfer from one association to another without delay.
             <br />
             <br />
-            b. The transfer should be done on the web application as well.{" "}
+            b. The transfer should be done on the web application as well.
             <br />
             <br /> c. The presidents/delegates of the current and the future
             associations should send an email requesting the transfer. <br />
             <br />
-            11.5. CONTACTS <br />
+            <span>11.5. CONTACTS</span>
             <br />
             a. All requests for contacts updates should be done by submitting a
             special form.
@@ -293,14 +294,13 @@ const ByLaws = () => {
         <Accordion.Item eventKey="12">
           <Accordion.Header>SECTION 13: FRAUD</Accordion.Header>
           <Accordion.Body>
-            13.1. WHAT IS FRAUD? <br />
+            <span>13.1. WHAT IS FRAUD? </span>
             <br /> a. A member having a SAGI matriculation number and not
             residing in the United States. <br />
             <br /> b. Any falsified document. <br />
             <br /> c. Any false statement. <br />
             <br />
-            13.2. SANCTIONS <br />
-            <br />
+            <span>13.2. SANCTIONS</span> <br />
             a. Where an offense is believed to have been committed the SAGI
             Bureau/Board can consider administering a caution or a penalty. The
             decision to offer a penalty will depend on individual circumstances.{" "}
@@ -326,7 +326,7 @@ const ByLaws = () => {
         <Accordion.Item eventKey="14">
           <Accordion.Header>SECTION 15: LITIGATION</Accordion.Header>
           <Accordion.Body>
-            15.1. EXCLUSIVE FORUM PROVISION <br />
+            <span>15.1. EXCLUSIVE FORUM PROVISION </span>
             <br />
             The headquarters of SAGI are located in Montgomery county, Maryland.
             Unless SAGI consents in writing to the selection of an alternative
@@ -348,19 +348,20 @@ const ByLaws = () => {
             if the Circuit Court for Prince George’s County does not have
             subject matter jurisdiction, the federal district court for the
             District of Maryland). <br />
-            <br /> 15.2. CLAIMS a. Only member associations have a right to
-            accounting and to challenge in court or through the general
-            assembly, the operation of the organization including the management
-            of funds. b. Individuals belonging to associations that are members
-            of SAGI do not have a right to accounting and cannot challenge in
-            court or otherwise, the operation of the organization including the
-            management of its funds and the conduct of its officers. c. SAGI
-            employees are indemnified by SAGI for work done on SAGI's behalf.{" "}
+            <br /> <span>15.2. CLAIMS</span> <br />
+            Only member associations have a right to accounting and to challenge
+            in court or through the general assembly, the operation of the
+            organization including the management of funds. b. Individuals
+            belonging to associations that are members of SAGI do not have a
+            right to accounting and cannot challenge in court or otherwise, the
+            operation of the organization including the management of its funds
+            and the conduct of its officers. c. SAGI employees are indemnified
+            by SAGI for work done on SAGI's behalf. <br />
+            <br /> <span>15.3. ATTORNEY FEES </span>
             <br />
-            <br /> 15.3. ATTORNEY FEES In any litigation, arbitration, or other
-            proceedings in which SAGI is the prevailing party, SAGI shall
-            collect from the non-prevailing party, its reasonable attorneys'
-            fees incurred.
+            In any litigation, arbitration, or other proceedings in which SAGI
+            is the prevailing party, SAGI shall collect from the non-prevailing
+            party, its reasonable attorneys' fees incurred.
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="15">
@@ -368,8 +369,7 @@ const ByLaws = () => {
             SECTION 16: IN CASE OF DEATH OF A SAGI MEMBER
           </Accordion.Header>
           <Accordion.Body>
-            16.1. DEATH ANNOUNCEMENT <br />
-            <br />
+            <span> 16.1. DEATH ANNOUNCEMENT</span> <br />
             a. Any death must be reported to the SAGI bureau within seven (7)
             days from the date of death; after this period, the death is no
             longer considered by SAGI and contributions will not be provided by
@@ -380,8 +380,7 @@ const ByLaws = () => {
             death, usually mentioned on the death certificate, before providing
             it to SAGI. <br />
             <br />
-            16.2. DEATH OCCURRED IN THE UNITED STATES <br />
-            <br />
+            <span> 16.2. DEATH OCCURRED IN THE UNITED STATES</span> <br />
             Documents to be submitted for a death in the US: <br />
             <br />
             a. Death certificate (Cause of death may be redacted) <br />
@@ -394,8 +393,7 @@ const ByLaws = () => {
             e. Evidence the member association is in good standing with SAGI
             (i.e., No outstanding invoices) <br />
             <br />
-            16.3. DEATH OCCURRED OUT OF UNITED STATES <br />
-            <br />
+            <span>16.3. DEATH OCCURRED OUT OF UNITED STATES</span> <br />
             Documents to be submitted for a death outside the US, but <br />
             <br />
             a. Death certificate (Cause of death may be redacted) <br />
@@ -417,14 +415,13 @@ const ByLaws = () => {
         <Accordion.Item eventKey="16">
           <Accordion.Header>SECTION 17: CONTRIBUTIONS</Accordion.Header>
           <Accordion.Body>
-            17.1. WHO SHOULD CONTRIBUTE? <br />
+            <span>17.1. WHO SHOULD CONTRIBUTE? </span>
             <br />
             All active member associations should take part in the ongoing
             contributions, even if the death of the individual occurred before
             their matriculation. <br />
             <br />
-            17.2. CONTRIBUTION AMOUNT <br />
-            <br />
+            <span>17.2. CONTRIBUTION AMOUNT</span> <br />
             a. The fixed amount to be collected is $20,000.00 (twenty thousand
             dollars) per death. This amount is divided among all active members
             in member associations, and each association’s contribution depends
@@ -433,7 +430,8 @@ const ByLaws = () => {
             <br />
             b. The amount of the contribution cannot be modified after the list
             is sent out. <br />
-            <br /> 17.3. CONTRIBUTION DUE DATE <br />
+            <br />
+            <span> 17.3. CONTRIBUTION DUE DATE </span>
             <br />
             a. The due date of contributions is seven (7) days after the
             contribution table is sent out by the SAGI Bureau/Board. <br />
@@ -445,8 +443,7 @@ const ByLaws = () => {
             Bureau/Board receives the required documents as outlined above.{" "}
             <br />
             <br />
-            17.4. ELIGIBILITY FOR CONTRIBUTIONS <br />
-            <br />
+            <span>17.4. ELIGIBILITY FOR CONTRIBUTIONS</span> <br />
             a. The death was verified and certified by SAGI Bureau/Board. <br />
             <br />
             b. The name of the individual, as it appears in the death
@@ -460,8 +457,7 @@ const ByLaws = () => {
             administration and/or matriculation fees before the date of the
             death. <br />
             <br />
-            17.5. NOT ELIGIBLE FOR CONTRIBUTIONS <br />
-            <br />
+            <span>17.5. NOT ELIGIBLE FOR CONTRIBUTIONS</span> <br />
             Not eligible for contributions under the following circumstances:{" "}
             <br />
             <br />
@@ -480,12 +476,12 @@ const ByLaws = () => {
             e. The person deceased has been in cameroon for more than a year.{" "}
             <br />
             <br />
-            17.6. CONTRIBUTIONS MODE Contributions are made in any of the
-            following ways: <br />
+            <span>17.6. CONTRIBUTIONS MODE</span>
+            <br /> Contributions are made in any of the following ways: <br />
             <br /> a. Bank deposit/transfer into one of SAGI’s bank accounts,
             provided with the contribution list. <br />
             <br />
-            CONTRIBUTION FORMALITIES <br />
+            <span>17.7. CONTRIBUTION FORMALITIES</span>
             <br />
             a. Bank deposits must be the exact amount as it appears on the
             contribution list. <br />
@@ -522,7 +518,7 @@ const ByLaws = () => {
         <Accordion.Item eventKey="19">
           <Accordion.Header>SECTION 20: SAGI FEES</Accordion.Header>
           <Accordion.Body>
-            20.1. ADMINISTRATION FEES <br />
+            <span> 20.1. ADMINISTRATION FEES</span>
             <br /> a. Every individual belonging to a member association of SAGI
             must pay an administration fee equivalent to $1.00 per month for a
             total of $12.00 per year, due once on January, 25th of each year.{" "}
@@ -533,7 +529,8 @@ const ByLaws = () => {
             members of the SAGI Bureau/Board, etc. <br />
             <br />
             c. The Administration fee is non-refundable. <br />
-            <br /> 20.2. MATRICULATION FEES <br />
+            <br />
+            <span> 20.2. MATRICULATION FEES</span>
             <br />
             a. Every new individual must make a one-time payment of $20.00 as a
             matriculation fee, due after the attribution of a matriculation
@@ -565,4 +562,102 @@ const ByLaws = () => {
     </Wrapper>
   );
 };
+const Wrapper = styled.section`
+  border-radius: var(--border-radius);
+  width: 100%;
+  background: var(--background-secondary-color);
+  padding: 3rem 2rem 4rem;
+  line-height: 2rem;
+  font-size: 130%;
+  .form-title {
+    margin-bottom: 1.5rem;
+    font-weight: bolder;
+  }
+  .accordion-item {
+  }
+  .form {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .form-row {
+    margin-bottom: 0;
+  }
+  .form-center {
+    display: grid;
+    row-gap: 1rem;
+  }
+  .badge {
+    background: var(--primary-500);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .status-title {
+    font-weight: bold;
+  }
+  .container {
+    margin: auto;
+    width: 640px;
+    padding: 50px;
+    font-family: "Avenir", sans-serif;
+    color: #33475b;
+  }
+  .container img {
+    display: flex;
+    justify-content: center;
+  }
+  .text {
+    line-height: 2rem;
+    color: grey;
+    font-weight: bolder;
+    display: grid;
+  }
+  .text-title {
+    margin: 3rem;
+  }
+
+  .form-btn {
+    align-self: end;
+    margin-top: 1rem;
+    display: flex;
+    place-items: center;
+  }
+  @media (min-width: 992px) {
+    .form-center {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      column-gap: 1rem;
+    }
+  }
+  @media (min-width: 1120px) {
+    .form-center {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  .accordion-header {
+    color: red;
+  }
+  .accordion-button {
+    color: var(--primary-400);
+    background: var(--background-secondary-color);
+    font-weight: bolder;
+  }
+  .accordion-item {
+    color: var(--text-secondary-color);
+    background: var(--background-secondary-color);
+  }
+
+  h1 {
+    padding: 1rem;
+    color: var(--primary-500);
+    font-weight: 600;
+  }
+  span {
+    color: red;
+  }
+`;
+
 export default ByLaws;

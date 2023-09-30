@@ -2,17 +2,18 @@ import React from "react";
 import { GenIcon } from "react-icons/lib";
 import styled from "styled-components";
 import { services } from "../utils/constants";
+import { HiChatAlt2 } from "react-icons/hi";
 
 const Services = () => {
   return (
     <Wrapper>
       <div className="section-center">
         <article className="header">
-          <h3>
-            The Solidarity in action,
+          <h2>
+            The Solidarity in Action,
             <br />
             Be part of the history!
-          </h3>
+          </h2>
           <h6>
             Amongst the panoply of organizations that follow you even in your
             bedrooms, remember that SAGI wants to be the "public option",
@@ -40,44 +41,49 @@ const Services = () => {
 };
 
 const Wrapper = styled.section`
-  /* margin-top: 10rem; */
+  margin-top: 0.5rem;
+  text-align: left;
 
-  h3 {
+  h2 {
     color: var(--primary-500);
+    font-weight: bolder;
     margin: 1rem 0;
   }
 
   h4 {
-    color: var(--primary-200);
+    color: var(--primary-900);
     margin: 1rem 0;
+    font-weight: 700;
   }
   /* padding: 5rem 0; */
 
-  background: var(--clr-primary-10);
+  background: var(--clr-primary-4);
 
   .header h3 {
     margin: 3rem 0;
     font-weight: bolder;
   }
   h6 {
-    margin-bottom: 0;
+    margin-bottom: 5rem;
     line-height: 2;
     color: var(--primary-400);
+    font-weight: 700;
+    font-size: 120%;
   }
   .services-center {
     margin-top: 1rem;
+    margin-bottom: 7rem;
     display: grid;
     gap: 2.5rem;
   }
   .service {
-    background: var(--primary-600);
+    background: var(--primary-500);
     text-align: center;
     padding: 2rem 2rem;
     border-radius: var(--radius);
     p {
-      color: var(--clr-primary-2);
       font-size: 90%;
-      line-height: 1.8;
+      /* line-height: 2; */
     }
   }
   span {
